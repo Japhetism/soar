@@ -2,12 +2,24 @@ import UserImage from '../../assets/images/user.png';
 import BELL_SVG from '../../assets/icons/bell';
 import COG_SVG from '../../assets/icons/cog';
 import SearchInput from '../searchInput';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const getPathname = () => {
+    if (pathname === "/" || pathname === "/dashboard") {
+      return "Overview"
+    }
+    const trimPathname = pathname.replace(/^\/+/, '');
+    return trimPathname.charAt(0).toUpperCase() + trimPathname.slice(1); 
+  }
+
   return (
     <header className="flex justify-between items-center h-[100px] p-4 px-10 bg-[#FFF] text-white border-b-[1px]">
       <div className="w-full md:w-auto flex justify-center md:justify-start">
-        <span className="text-[#343C6A] text-[28px] font-semibold font-inter">Overview</span>
+        <span className="text-[#343C6A] text-[28px] font-semibold font-inter">{getPathname()}</span>
       </div>
       
       <div className="flex items-center space-x-10">
