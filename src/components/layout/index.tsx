@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <SideMenu />
         <div className="flex flex-col flex-1">
           <Header />
-          <main className="flex-1 p-4 overflow-auto">
+          <main className="flex-1 p-8 overflow-auto bg-slate-100">
             {children}
           </main>
         </div>

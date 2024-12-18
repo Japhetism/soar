@@ -6,7 +6,7 @@ import SearchInput from '../searchInput';
 const Header = () => {
   return (
     <header className="flex justify-between items-center h-[100px] p-4 px-10 bg-[#FFF] text-white border-b-[1px]">
-      <div className="px-4 w-full md:w-auto flex justify-center md:justify-start">
+      <div className="w-full md:w-auto flex justify-center md:justify-start">
         <span className="text-[#343C6A] text-[28px] font-semibold font-inter">Overview</span>
       </div>
       
