@@ -13,11 +13,7 @@ const SideMenu: React.FC = () => {
 
   return (
     <div>
-      <div
-        className={`lg:w-[250px] w-0 h-screen bg-white shadow-lg flex flex-col justify-start items-center transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'w-[250px]' : 'w-0'
-        }`}
-      >
+      <div  className="lg:w-[250px] w-0 h-screen bg-white shadow-lg flex flex-col justify-start items-center transition-all duration-300 ease-in-out sm:hidden lg:flex">
         <div className="flex items-center justify-between w-full p-6 text-2xl font-bold text-black mb-2">
           <div className="flex items-center space-x-2">
             <TASK_SVG />
